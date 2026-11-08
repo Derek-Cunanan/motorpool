@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Trips | Vehicle Motorpool</title>
+
+    <link rel="stylesheet" href="/stylesheet/trips.css">
+    
+</head>
+<body>
+
+    <button id="navToggle" class="menu-button">
+        <img src="../assits/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
+             alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+
+        <a href="main.html">Dashboard</a>
+        <a href="viewVehicles.html">View Vehicles</a>
+        <a href="viewTrips.html" class="active">View Trips</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="driverRequest.html">Driver Requests</a>
+    </nav>
+
+    <main class="content">
+
+        <header class="page-header">
+            <div>
+                <p class="page-label">VEHICLE MANAGEMENT</p>
+                <h1>View Trips</h1>
+                <p>Monitor and manage vehicle trips.</p>
+            </div>
+        </header>
+
+        <section class="summary-cards">
+            <div class="summary-card">
+                <p>Total Trips</p>
+                <h2>0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Ongoing Trips</p>
+                <h2>0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Completed Trips</p>
+                <h2>0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Pending Trips</p>
+                <h2>0</h2>
+            </div>
+        </section>
+
+        <section class="table-panel">
+
+            <div class="table-header">
+                <div>
+                    <h2>Trip Records</h2>
+                    <p>List of all recorded vehicle trips</p>
+                </div>
+
+                <input type="search" id="tripSearch"
+                       placeholder="Search trips...">
+            </div>
+
+            <div class="table-wrapper">
+                <table id="tripTable">
+                    <thead>
+                        <tr>
+                            <th>Trip ID</th>
+                            <th>Driver</th>
+                            <th>Vehicle</th>
+                            <th>Destination</th>
+                            <th>Departure</th>
+                            <th>Return</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="7" class="empty-state">
+                                No trip records available.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

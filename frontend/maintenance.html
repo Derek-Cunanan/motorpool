@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance | Vehicle Motorpool</title>
+
+    <link rel="stylesheet" href="/stylesheet/maintenance.css">
+</head>
+<body>
+
+    <button id="navToggle" class="menu-button">
+        <img src="../assits/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg"
+             alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+
+        <a href="main.html">Dashboard</a>
+        <a href="viewVehicles.html">View Vehicles</a>
+        <a href="viewTrips.html">View Trips</a>
+        <a href="maintenance.html" class="active">Maintenance</a>
+        <a href="driverRequest.html">Driver Requests</a>
+    </nav>
+
+    <main class="content">
+
+        <header class="page-header">
+            <div>
+                <p class="page-label">VEHICLE MANAGEMENT</p>
+                <h1>Maintenance</h1>
+                <p>Monitor vehicle maintenance records and service schedules.</p>
+            </div>
+        </header>
+
+        <section class="summary-cards">
+
+            <div class="summary-card">
+                <p>Total Records</p>
+                <h2>0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>In Progress</p>
+                <h2>0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Completed</p>
+                <h2>0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Scheduled</p>
+                <h2>0</h2>
+            </div>
+
+        </section>
+
+        <section class="table-panel">
+
+            <div class="table-header">
+                <div>
+                    <h2>Maintenance Records</h2>
+                    <p>List of vehicle repairs and maintenance activities</p>
+                </div>
+
+                <input type="search" id="maintenanceSearch"
+                       placeholder="Search records...">
+            </div>
+
+            <div class="table-wrapper">
+                <table id="maintenanceTable">
+
+                    <thead>
+                        <tr>
+                            <th>Record ID</th>
+                            <th>Vehicle</th>
+                            <th>Plate No.</th>
+                            <th>Maintenance Type</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="7" class="empty-state">
+                                No maintenance records available.
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>

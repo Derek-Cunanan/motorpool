@@ -1,0 +1,195 @@
+
+@font-face {
+    font-family: "Garet";
+    src: url("../assets/fonts/Garet-Book.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Garet", Arial, sans-serif;
+}
+
+body {
+    background: #242830;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* MENU BUTTON */
+#navToggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #343943;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1101;
+}
+
+#navToggle img {
+    width: 23px;
+    height: 23px;
+    display: block;
+    filter: invert(1);
+}
+
+/* SIDEBAR */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 85px 18px 20px;
+    background: #1c2027;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border-right: 1px solid #3a414e;
+    overflow-y: auto;
+}
+
+#navbar.open {
+    transform: translateX(0);
+}
+
+#navbar h2 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 10px 30px;
+    color: #ffffff;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #aeb5c1;
+    padding: 14px 15px;
+    margin-bottom: 8px;
+    border-radius: 9px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+#navbar a:hover,
+#navbar a.active {
+    background: #343c4a;
+    color: #ffffff;
+}
+
+/* MAIN CONTENT */
+.content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 45px 45px 40px;
+    transition: 0.3s ease;
+}
+
+.page-header {
+    margin: 25px 0 35px;
+}
+
+.page-label {
+    color: #7d9bc4;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.page-description {
+    color: #aeb5c1;
+    font-size: 13px;
+}
+
+/* VEHICLE TABLE PANEL */
+.table-panel {
+    background: #2d333e;
+    border: 1px solid #3a414e;
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.panel-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.panel-header p {
+    color: #929baa;
+    font-size: 12px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#vehicleTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 550px;
+}
+
+#vehicleTable th {
+    background: #343943;
+    color: #aeb5c1;
+    text-align: left;
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#vehicleTable td {
+    padding: 16px;
+    border-bottom: 1px solid #414854;
+    color: #e2e5eb;
+    font-size: 13px;
+}
+
+#vehicleTable tbody tr:hover {
+    background: #343943;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .content {
+        padding: 85px 18px 30px;
+    }
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .table-panel {
+        padding: 18px;
+    }
+}

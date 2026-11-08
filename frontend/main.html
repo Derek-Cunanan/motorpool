@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Motorpool System</title>
+
+    <link rel="stylesheet" href="/stylesheet/main.css">
+    <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
+</head>
+<body>
+
+    <button id="navToggle" aria-label="Toggle navigation">
+        <img src="../assits/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+
+        <a href="main.html" class="active">Dashboard</a>
+        <a href="vehicles.html">View Vehicles</a>
+        <a href="viewTrips.html">View Trips</a>
+        <a href="maintenance.html">Maintenance</a>
+        
+
+        <div class="add-driver">
+            <form class="add-driver" id="addDriver" action="">
+                <label for="driverName">Add Driver:</label>
+                <input type="text" id="driverName" name="driverName" placeholder="Enter driver name" required>
+                <input type="text" id="driverPassword" name="driverPassword" placeholder="Enter driver password" required>
+                <button type="submit" id="submitDriver">ADD DRIVER</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="content">
+
+        <header class="page-header">
+            <div>
+                <p class="page-label">VEHICLE MANAGEMENT</p>
+                <h1>Dashboard</h1>
+                <p class="page-description">Overview of your vehicle motorpool system.</p>
+            </div>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <div class="card-icon"><span>V</span></div>
+                <div>
+                    <p class="cardLabel">Available Vehicles</p>
+                    <p class="cardNum" id="numAvail">0</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><span>U</span></div>
+                <div>
+                    <p class="cardLabel">In Use</p>
+                    <p class="cardNum" id="numUnavail">0</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><span>M</span></div>
+                <div>
+                    <p class="cardLabel">Under Maintenance</p>
+                    <p class="cardNum" id="numMaintenance">0</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><span>R</span></div>
+                <div>
+                    <p class="cardLabel">Pending Requests</p>
+                    <p class="cardNum" id="numPending">0</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="dashboard-grid">
+
+            <div class="left-panels">
+
+                <section class="table-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Vehicle Records</h2>
+                            <p>Overview of registered vehicles</p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table id="vehicleTable">
+                            <thead>
+                                <tr id="theaderRow">
+                                    <th id="firstChild">Vehicle</th>
+                                    <th>Driver</th>
+                                    <th>Status</th>
+                                    <th id="lastChild">Plate No.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablebody">
+                                <tr>
+                                    <td>Toyota</td>
+                                    <td>Jen</td>
+                                    <td>Available</td>
+                                    <td>DJS-1220</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="chart-panel">
+                    <h2>Vehicle Overview</h2>
+                    <p>Vehicle information and status summary.</p>
+                    <div class="chart"></div>
+                </section>
+
+            </div>
+
+            <aside class="requestContainer">
+                <div class="request-heading">
+                    <div>
+                        <h2 id="requestHeader">Pending Requests</h2>
+                        <p>Requests waiting for approval</p>
+                    </div>
+                </div>
+                
+                <div class="request-list">
+                    <div class="request">
+                        <p class="requestTitle">Vehicle Request</p>
+                        <p class="requestPurpose">Requested by: Driver Name</p>
+                        <p class="requestPurpose">Purpose: Official Travel</p>
+                         
+                        <div class="request-actions">
+                            <button class="requestAccept" type="button">ACCEPT</button>
+                            <button class="requestReject" type="button">REJECT</button>
+                        </div>
+                    </div>
+                </aside>
+
+        </section>
+
+    </main>
+
+    <script src="/scripts/main.js"></script>
+    
+</body>
+</html>

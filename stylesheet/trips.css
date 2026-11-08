@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Garet';
+    src: url('../../assets/fonts/Garet-Book.otf') format('opentype');
+    font-weight: 400;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Garet', sans-serif;
+}
+
+body {
+    background: #242830;
+    color: #f1f3f6;
+    min-height: 100vh;
+}
+
+/* MENU BUTTON */
+
+.menu-button {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1001;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #343943;
+    cursor: pointer;
+}
+
+.menu-button img {
+    width: 23px;
+    height: 23px;
+    filter: invert(1);
+}
+
+/* SIDEBAR */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: -270px;
+    width: 250px;
+    height: 100vh;
+    padding: 85px 20px 25px;
+    background: #1c2027;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+#navbar.open {
+    left: 0;
+}
+
+#navbar h2 {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #aeb5c1;
+    padding: 14px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+#navbar a:hover,
+#navbar a.active {
+    background: #343c4a;
+    color: white;
+}
+
+/* MAIN CONTENT */
+
+.content {
+    padding: 45px 40px;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-label {
+    color: #7d9bc4;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.page-header p:last-child {
+    color: #929baa;
+    font-size: 13px;
+}
+
+/* SUMMARY CARDS */
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    background: #2d333e;
+    border: 1px solid #3a414e;
+    border-radius: 13px;
+    padding: 22px;
+}
+
+.summary-card p {
+    color: #aeb6c3;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.summary-card h2 {
+    font-size: 27px;
+}
+
+/* TABLE PANEL */
+
+.table-panel {
+    background: #2d333e;
+    border: 1px solid #3a414e;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.table-header h2 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.table-header p {
+    color: #929baa;
+    font-size: 11px;
+}
+
+.table-header input {
+    background: #252b34;
+    border: 1px solid #414854;
+    color: white;
+    padding: 11px 14px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 12px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+#tripTable {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#tripTable th {
+    background: #252b34;
+    color: #aeb6c3;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 15px 12px;
+}
+
+#tripTable td {
+    padding: 15px 12px;
+    font-size: 12px;
+    border-bottom: 1px solid #414854;
+}
+
+.empty-state {
+    text-align: center;
+    color: #929baa;
+    padding: 35px !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 85px 18px 25px;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .table-panel {
+        padding: 15px;
+    }
+
+    .table-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .table-header input {
+        width: 100%;
+    }
+}

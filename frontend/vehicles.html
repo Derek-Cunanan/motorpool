@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Vehicles - Vehicle Motorpool System</title>
+
+    <link rel="stylesheet" href="/stylesheet/vehicles.css">
+    <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
+</head>
+<body>
+
+    <button id="navToggle" type="button" aria-label="Toggle navigation">
+        <img src="../assits/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="Menu">
+    </button>
+
+    <nav id="navbar" class="open">
+        <h2>VEHICLE MOTORPOOL</h2>
+
+        <a href="main.html">Dashboard</a>
+        <a href="viewVehicles.html" class="active">View Vehicles</a>
+        <a href="viewTrips.html">View Trips</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="driverRequest.html">Driver Requests</a>
+    </nav>
+
+    <main class="content">
+        <header class="page-header">
+            <div>
+                <p class="page-label">VEHICLE MANAGEMENT</p>
+                <h1>View Vehicles</h1>
+                <p class="page-description">View and manage registered vehicles.</p>
+            </div>
+        </header>
+
+        <section class="table-panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Vehicle Records</h2>
+                    <p>List of registered vehicles</p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="vehicleTable">
+                    <thead>
+                        <tr>
+                            <th>Plate No:</th>
+                            <th>OdoMeter</th>
+                            <th>Brand</th>
+                            <th>Type</th>
+                            <th>Maintenance Date</th>
+                            <th>Status</th>
+                            <th>Driver</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vehicleBody">
+                        <tr>
+                            <td>RAPH-BDING</td>
+                            <td>231123</td>
+                            <td>Mercedes</td>
+                            <td>Truck</td>
+                            <td>10/10/10</td>
+                            <td>Available</td>
+                            <td>Raph</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="/scripts/vehicles.js"></script>
+</body>
+ve
+</html>
